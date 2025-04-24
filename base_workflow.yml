@@ -1,0 +1,33 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+on:
+  ## COMPLETARE QUANDO PARTE IL RUN
+  
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+  ## COMPLETARE I PERMESSI
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+jobs:
+  # Add a test job
+  test:
+    runs-on: ubuntu-latest
+    env:
+        # Imposta una variabile d'ambiente per far fallire i test
+        
+    steps:
+      # COMPLETARE GLI STEPS DI TEST 
+      
+
+  # Single deploy job since we're just deploying
+  deploy:
+     ## AGGIUGNERE CHE È NECESSARIO IL PASSAGGIO DEL TEST
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      ## COMPLETARE GLI STEPS
