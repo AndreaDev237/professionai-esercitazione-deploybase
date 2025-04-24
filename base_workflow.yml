@@ -15,7 +15,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-        # Imposta una variabile d'ambiente per far fallire i test
+        # Imposta una variabile d'ambiente per far fallire i test 
         
     steps:
       # COMPLETARE GLI STEPS DI TEST 

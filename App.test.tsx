@@ -3,7 +3,9 @@ import {expect, test} from 'vitest'
 
 test("Test Corretto", trueTest);
 
-test.runIf(import.meta.env.VITE_FAIL_TEST === 'true')("Test Errato", falseTest)
+const EnvVariable = (import.meta.env.VITE_FAIL_TEST as string).trim().toLowerCase();
+
+test.runIf(EnvVariable === 'true')("Test Errato", falseTest)
 
 
 function trueTest() : void{
